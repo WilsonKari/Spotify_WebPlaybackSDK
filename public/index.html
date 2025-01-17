@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify Player</title>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <div class="token-timer">
+        <div class="timer-label">Token Lifetime:</div>
+        <div id="tokenTimer">--:--</div>
+        <div class="token-preview" id="tokenPreview">...</div>
+    </div>
+    <div class="container">
+        <h1>Spotify Player</h1>
+        <div id="error-message"></div>
+        <button onclick="window.location.href='/login'">Login with Spotify</button>
+
+        <div id="trackInfo">
+            <div class="current-track">
+                <img src="" alt="Album Art" class="album-art">
+                <div class="track-details">
+                    <div class="track-title">No song currently playing</div>
+                    <div class="track-artist"></div>
+                </div>
+            </div>
+
+            <div class="progress">
+                <progress value="0" max="100"></progress>
+            </div>
+
+            <div class="status">
+                <span class="current-time">0:00</span>
+                <span class="total-time">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="previousTrack()">Previous</button>
+            <button id="playButton" onclick="togglePlay()">Play</button>
+            <button onclick="nextTrack()">Next</button>
+            <button id="refreshToken">Refresh Token</button>
+        </div>
+
+        <div class="upcoming-tracks">
+            <h3>Upcoming Tracks</h3>
+            <ul>
+                <!-- Tracks will be populated by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="/js/player.js"></script>
+</body>
+
+</html>
