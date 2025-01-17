@@ -1,0 +1,43 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno
+.env*
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Archivos de configuración sensible
+config/spotify.js
+
+# Archivos generados
+dist/
+build/
+coverage/
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs y archivos temporales
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Archivos de caché
+.cache/
+.temp/
+.tmp/
+
+# Archivos de sistema operativo
+*.swp
+*.swo
+*~
